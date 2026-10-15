@@ -7,7 +7,7 @@ cask "upwork-monitor" do
   desc "Read Upwork job feeds and draft AI replies"
   homepage "https://github.com/Kgym-Hina/homebrew-upwork-monitor"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "UpworkMonitor.app"
 
