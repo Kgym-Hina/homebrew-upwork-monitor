@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05AB9B01D08467D6303EF45F /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270B3D81B1BEA9252C74254 /* NotificationManager.swift */; };
+		111F5C6336717EC655516793 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FF81AFF54937CA949BABD /* Support.swift */; };
+		17BD241915CC625A3019A735 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FF81AFF54937CA949BABD /* Support.swift */; };
+		199F372ADCB8D472EC61244B /* UpworkMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D13AACB1F8A3EC6C32269 /* UpworkMonitorApp.swift */; };
+		1C080E516C551B25627CA98C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8BA1191F293279703CC47 /* RootView.swift */; };
+		2DE8C0C7A94B5AD643DF7C32 /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C32AADFB3C5F994E15852 /* JobDetailView.swift */; };
+		3381CAD0981D25986283458D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B41D5FBE3FBE53055731B /* Models.swift */; };
+		43ECB74B1082A2E0E00CEF13 /* UpworkMCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737AEC1AF2E1B542CE6B449 /* UpworkMCPClient.swift */; };
+		46A4E1271B50506DF7B433A0 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6682B9CD95952C80300B13 /* KeychainStore.swift */; };
+		54E052752EC3D64C5DCECF31 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6682B9CD95952C80300B13 /* KeychainStore.swift */; };
+		5777AEA10432F0E121671327 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E92903824896071609D37 /* JobListView.swift */; };
+		57E48D9FC68BD5AED1C72E28 /* UpworkMCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737AEC1AF2E1B542CE6B449 /* UpworkMCPClient.swift */; };
+		612F99D635A22D74776CB2D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A535436C608781C896EA79 /* Assets.xcassets */; };
+		65647564F5E2DAEEEFB438EB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D161D9496B1B2C7709A85 /* SettingsView.swift */; };
+		66FCD1A6227B58AA7F9998DB /* OAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8556DFF12E737845F842D8 /* OAuthCoordinator.swift */; };
+		6B02A20E0B95B4138B4F4177 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17B41D5FBE3FBE53055731B /* Models.swift */; };
+		6B9DB6C20C2B5AFA9F56AF76 /* OAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8556DFF12E737845F842D8 /* OAuthCoordinator.swift */; };
+		717EEB5CFD255A181A7B874F /* UpworkMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D13AACB1F8A3EC6C32269 /* UpworkMonitorApp.swift */; };
+		78754360B1A01112B45A4D6F /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BD347139029C0B554352C /* AppModel.swift */; };
+		9DEE2FB2EF3F438C0BFADC22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A535436C608781C896EA79 /* Assets.xcassets */; };
+		9E6A44D597A37C3EFD5240F0 /* JobListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E92903824896071609D37 /* JobListView.swift */; };
+		C0EE56F510FFA718BECB1BE4 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270B3D81B1BEA9252C74254 /* NotificationManager.swift */; };
+		CBCD1C6E258AA3E8194872EA /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8BD347139029C0B554352C /* AppModel.swift */; };
+		D5A21B488D6E5056EDC1106F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D161D9496B1B2C7709A85 /* SettingsView.swift */; };
+		F58A10D5A43E1BABD695877F /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C32AADFB3C5F994E15852 /* JobDetailView.swift */; };
+		FA59C78486E77AB93A28F87C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8BA1191F293279703CC47 /* RootView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D3D13AACB1F8A3EC6C32269 /* UpworkMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkMonitorApp.swift; sourceTree = "<group>"; };
+		161D161D9496B1B2C7709A85 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2270B3D81B1BEA9252C74254 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		3F8BD347139029C0B554352C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		478094D38BCF0A1F77AFB760 /* UpworkMonitor-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UpworkMonitor-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		656C32AADFB3C5F994E15852 /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
+		6A6682B9CD95952C80300B13 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		87847F37E7AC1762628183C0 /* UpworkMonitor-iOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "UpworkMonitor-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A535436C608781C896EA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A2E92903824896071609D37 /* JobListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListView.swift; sourceTree = "<group>"; };
+		B737AEC1AF2E1B542CE6B449 /* UpworkMCPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpworkMCPClient.swift; sourceTree = "<group>"; };
+		C17B41D5FBE3FBE53055731B /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C72FF81AFF54937CA949BABD /* Support.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		EAD8BA1191F293279703CC47 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FC8556DFF12E737845F842D8 /* OAuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		6DFC8109DDBECBA3A6A7123C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87847F37E7AC1762628183C0 /* UpworkMonitor-iOS.app */,
+				478094D38BCF0A1F77AFB760 /* UpworkMonitor-macOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75ED96D7EF3BA4D545477B01 = {
+			isa = PBXGroup;
+			children = (
+				E130D5079E19ABDDE35D8C11 /* UpworkMonitor */,
+				6DFC8109DDBECBA3A6A7123C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E130D5079E19ABDDE35D8C11 /* UpworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				3F8BD347139029C0B554352C /* AppModel.swift */,
+				87A535436C608781C896EA79 /* Assets.xcassets */,
+				656C32AADFB3C5F994E15852 /* JobDetailView.swift */,
+				9A2E92903824896071609D37 /* JobListView.swift */,
+				6A6682B9CD95952C80300B13 /* KeychainStore.swift */,
+				C17B41D5FBE3FBE53055731B /* Models.swift */,
+				2270B3D81B1BEA9252C74254 /* NotificationManager.swift */,
+				FC8556DFF12E737845F842D8 /* OAuthCoordinator.swift */,
+				EAD8BA1191F293279703CC47 /* RootView.swift */,
+				161D161D9496B1B2C7709A85 /* SettingsView.swift */,
+				C72FF81AFF54937CA949BABD /* Support.swift */,
+				B737AEC1AF2E1B542CE6B449 /* UpworkMCPClient.swift */,
+				0D3D13AACB1F8A3EC6C32269 /* UpworkMonitorApp.swift */,
+			);
+			path = UpworkMonitor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA2347B53F5E3E4F9AC21200 /* UpworkMonitor-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5D608ABA5A2E1DCE813A231 /* Build configuration list for PBXNativeTarget "UpworkMonitor-iOS" */;
+			buildPhases = (
+				E9DCD92700F5CDAE98E32F89 /* Sources */,
+				B18C945089F4D77677D6DFCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UpworkMonitor-iOS";
+			packageProductDependencies = (
+			);
+			productName = "UpworkMonitor-iOS";
+			productReference = 87847F37E7AC1762628183C0 /* UpworkMonitor-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6B6D6742431305BABAE6549 /* UpworkMonitor-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9481ED9CB21A08E535DE1DE /* Build configuration list for PBXNativeTarget "UpworkMonitor-macOS" */;
+			buildPhases = (
+				3269F475B691FCE06BC2910E /* Sources */,
+				1BCB5F8CBA249848AF707674 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UpworkMonitor-macOS";
+			packageProductDependencies = (
+			);
+			productName = "UpworkMonitor-macOS";
+			productReference = 478094D38BCF0A1F77AFB760 /* UpworkMonitor-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		094729061C35A05647B15C4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 8404D36B77B430F72A3DE41F /* Build configuration list for PBXProject "UpworkMonitor" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 75ED96D7EF3BA4D545477B01;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6DFC8109DDBECBA3A6A7123C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA2347B53F5E3E4F9AC21200 /* UpworkMonitor-iOS */,
+				F6B6D6742431305BABAE6549 /* UpworkMonitor-macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1BCB5F8CBA249848AF707674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEE2FB2EF3F438C0BFADC22 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B18C945089F4D77677D6DFCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				612F99D635A22D74776CB2D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3269F475B691FCE06BC2910E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBCD1C6E258AA3E8194872EA /* AppModel.swift in Sources */,
+				2DE8C0C7A94B5AD643DF7C32 /* JobDetailView.swift in Sources */,
+				5777AEA10432F0E121671327 /* JobListView.swift in Sources */,
+				54E052752EC3D64C5DCECF31 /* KeychainStore.swift in Sources */,
+				6B02A20E0B95B4138B4F4177 /* Models.swift in Sources */,
+				05AB9B01D08467D6303EF45F /* NotificationManager.swift in Sources */,
+				6B9DB6C20C2B5AFA9F56AF76 /* OAuthCoordinator.swift in Sources */,
+				1C080E516C551B25627CA98C /* RootView.swift in Sources */,
+				D5A21B488D6E5056EDC1106F /* SettingsView.swift in Sources */,
+				17BD241915CC625A3019A735 /* Support.swift in Sources */,
+				57E48D9FC68BD5AED1C72E28 /* UpworkMCPClient.swift in Sources */,
+				717EEB5CFD255A181A7B874F /* UpworkMonitorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9DCD92700F5CDAE98E32F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78754360B1A01112B45A4D6F /* AppModel.swift in Sources */,
+				F58A10D5A43E1BABD695877F /* JobDetailView.swift in Sources */,
+				9E6A44D597A37C3EFD5240F0 /* JobListView.swift in Sources */,
+				46A4E1271B50506DF7B433A0 /* KeychainStore.swift in Sources */,
+				3381CAD0981D25986283458D /* Models.swift in Sources */,
+				C0EE56F510FFA718BECB1BE4 /* NotificationManager.swift in Sources */,
+				66FCD1A6227B58AA7F9998DB /* OAuthCoordinator.swift in Sources */,
+				FA59C78486E77AB93A28F87C /* RootView.swift in Sources */,
+				65647564F5E2DAEEEFB438EB /* SettingsView.swift in Sources */,
+				111F5C6336717EC655516793 /* Support.swift in Sources */,
+				43ECB74B1082A2E0E00CEF13 /* UpworkMCPClient.swift in Sources */,
+				199F372ADCB8D472EC61244B /* UpworkMonitorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		395B627A744F7363CA91AE87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UpworkMonitor/UpworkMonitor-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "UpworkMonitor/Info-iOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hina.UpworkMonitor.ios;
+				PRODUCT_NAME = UpworkMonitor;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		68C17AA29D9D781C27DCDE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		69476CDC8F851BC2258E62B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UpworkMonitor/UpworkMonitor-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "UpworkMonitor/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hina.UpworkMonitor.macos;
+				PRODUCT_NAME = UpworkMonitor;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		7522FBB2BEED727D71F39AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A5421CC2DF36ADD60B1AAD45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UpworkMonitor/UpworkMonitor-macOS.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "UpworkMonitor/Info-macOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hina.UpworkMonitor.macos;
+				PRODUCT_NAME = UpworkMonitor;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		ABA8DAE3A0E1D9CF82319EE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UpworkMonitor/UpworkMonitor-iOS.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "UpworkMonitor/Info-iOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hina.UpworkMonitor.ios;
+				PRODUCT_NAME = UpworkMonitor;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8404D36B77B430F72A3DE41F /* Build configuration list for PBXProject "UpworkMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68C17AA29D9D781C27DCDE3C /* Debug */,
+				7522FBB2BEED727D71F39AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C5D608ABA5A2E1DCE813A231 /* Build configuration list for PBXNativeTarget "UpworkMonitor-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				395B627A744F7363CA91AE87 /* Debug */,
+				ABA8DAE3A0E1D9CF82319EE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F9481ED9CB21A08E535DE1DE /* Build configuration list for PBXNativeTarget "UpworkMonitor-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5421CC2DF36ADD60B1AAD45 /* Debug */,
+				69476CDC8F851BC2258E62B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 094729061C35A05647B15C4C /* Project object */;
+}
