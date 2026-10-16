@@ -128,6 +128,15 @@ struct SettingsView: View {
                 #endif
             }
 
+            Section("Excluded countries") {
+                TextField("Country keywords", text: $model.settings.excludedCountryKeywords, axis: .vertical)
+                    .lineLimit(2...4)
+                    .autocorrectionDisabled()
+                    #if os(iOS)
+                    .textInputAutocapitalization(.words)
+                    #endif
+            }
+
             Section("Proposal highlights") {
                 ForEach(ProposalTier.allCases) { tier in
                     Picker(

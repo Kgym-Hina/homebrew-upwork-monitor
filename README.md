@@ -10,7 +10,8 @@ Upwork Monitor is a native SwiftUI app for macOS and iOS. It displays Upwork's B
 - One-click copy of project and client information.
 - Optional AI-generated reply drafts using an API endpoint configured by the user. Drafts can be copied; opening the Upwork listing is a separate user action.
 - Per-range proposal highlights for fewer than 5, 5–10, 10–15, 15–20, 20–50, and 50+ proposals. Each range can be green, yellow, red, or unhighlighted.
-- macOS polling with local notifications and optional launch at login.
+- Country keyword exclusions for job listings and notifications.
+- macOS polling with local notifications that open the selected job's detail view, and optional launch at login.
 - OAuth credentials and AI API key stored in the platform Keychain.
 
 The app does not submit proposals, send messages, modify contracts, make payments, or invoke Upwork write actions.

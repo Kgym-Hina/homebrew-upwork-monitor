@@ -1,6 +1,6 @@
 cask "upwork-monitor" do
-  version "1.0"
-  sha256 "94f7ed5f98f05af4c006be047dfcf7e291775062c99caf5c2b750d2d677728cc"
+  version "1.1"
+  sha256 "64cdb9b892c6fd5ab7947de75aaf6661a6bc57765a4211937aeb401bb930dd81"
 
   url "https://github.com/Kgym-Hina/homebrew-upwork-monitor/releases/download/v#{version}/UpworkMonitor-#{version}.zip"
   name "Upwork Monitor"

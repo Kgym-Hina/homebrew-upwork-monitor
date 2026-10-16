@@ -1,6 +1,6 @@
 import Foundation
 
-enum FeedKind: String, CaseIterable, Identifiable, Codable {
+enum FeedKind: String, CaseIterable, Identifiable, Codable, Sendable {
     case bestMatches
     case mostRecent
 
@@ -18,6 +18,28 @@ enum FeedKind: String, CaseIterable, Identifiable, Codable {
         case .bestMatches: "best_match"
         case .mostRecent: "most_recent"
         }
+    }
+}
+
+struct JobNotificationRoute: Codable, Hashable, Sendable {
+    let jobID: String
+    let feed: FeedKind
+    let title: String
+    let urlString: String?
+
+    init(job: UpworkJob, feed: FeedKind) {
+        self.init(jobID: job.id, feed: feed, title: job.title, urlString: job.urlString)
+    }
+
+    init(jobID: String, feed: FeedKind, title: String, urlString: String?) {
+        self.jobID = jobID
+        self.feed = feed
+        self.title = title
+        self.urlString = urlString
+    }
+
+    var placeholderJob: UpworkJob {
+        UpworkJob(id: jobID, title: title, description: "", urlString: urlString)
     }
 }
 
@@ -332,6 +354,7 @@ struct AppSettings: Codable, Hashable {
     var launchAtLogin = false
     var selectedAccountUID: String?
     var proposalHighlightColors = ProposalHighlightColor.defaults
+    var excludedCountryKeywords = ""
 
     init() {}
 
@@ -341,6 +364,7 @@ struct AppSettings: Codable, Hashable {
         case launchAtLogin
         case selectedAccountUID
         case proposalHighlightColors
+        case excludedCountryKeywords
     }
 
     init(from decoder: Decoder) throws {
@@ -354,6 +378,7 @@ struct AppSettings: Codable, Hashable {
             forKey: .proposalHighlightColors
         ) ?? [:]
         proposalHighlightColors = ProposalHighlightColor.defaults.merging(savedColors) { _, saved in saved }
+        excludedCountryKeywords = try values.decodeIfPresent(String.self, forKey: .excludedCountryKeywords) ?? ""
     }
 }
 

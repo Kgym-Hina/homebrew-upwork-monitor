@@ -17,7 +17,7 @@ struct JobListView: View {
             }
             #endif
         }
-        .sheet(item: $selectedJob) { job in
+        .sheet(item: $selectedJob, onDismiss: model.clearNotificationJobToOpen) { job in
             NavigationStack {
                 JobDetailView(job: job)
                     .toolbar {
@@ -31,6 +31,14 @@ struct JobListView: View {
             #else
             .presentationDetents([.large])
             #endif
+        }
+        .onChange(of: model.notificationJobToOpen) { _, job in
+            if let job { selectedJob = job }
+        }
+        .task {
+            if let job = model.notificationJobToOpen {
+                selectedJob = job
+            }
         }
     }
 

@@ -27,6 +27,7 @@ final class AppModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var copiedJobID: String?
     @Published var copyingJobID: String?
+    @Published private(set) var notificationJobToOpen: UpworkJob?
 
     private let mcpClient: UpworkMCPClient
     private let oauthCoordinator: OAuthCoordinator
@@ -38,6 +39,7 @@ final class AppModel: ObservableObject {
     private var detailsByID: [String: UpworkJob] = [:]
     private var monitorTask: Task<Void, Never>?
     private var didRestoreConnection = false
+    private var deferredNotificationRoute: JobNotificationRoute?
 
     init(
         mcpClient: UpworkMCPClient = UpworkMCPClient(),
@@ -55,9 +57,15 @@ final class AppModel: ObservableObject {
         self.aiSettings = aiSettingsStore.load()
         self.hasAIAPIKey = false
         self.isConnected = false
+        self.deferredNotificationRoute = NotificationManager.shared.pendingJobRoute()
+        NotificationManager.shared.onJobNotificationTap = { [weak self] route in
+            self?.receiveNotificationRoute(route)
+        }
     }
 
-    var currentJobs: [UpworkJob] { jobsByFeed[selectedFeed] ?? [] }
+    var currentJobs: [UpworkJob] {
+        (jobsByFeed[selectedFeed] ?? []).filter { !isExcludedByCountry($0) }
+    }
 
     var selectedAccount: UpworkAccount? {
         if let selected = settings.selectedAccountUID,
@@ -77,7 +85,10 @@ final class AppModel: ObservableObject {
     func restoreConnection() async {
         guard !didRestoreConnection else { return }
         didRestoreConnection = true
-        defer { isRestoringConnection = false }
+        defer {
+            isRestoringConnection = false
+            presentDeferredNotificationRouteIfReady()
+        }
         await oauthCoordinator.restoreFromKeychain()
         let storedAIAPIKey = try? await KeychainStore.shared.load(String.self, for: Self.aiAPIKeyKey)
         hasAIAPIKey = storedAIAPIKey?.isEmpty == false
@@ -158,6 +169,7 @@ final class AppModel: ObservableObject {
     }
 
     func loadDetails(for job: UpworkJob) async {
+        guard isConnected, selectedAccount != nil else { return }
         do {
             _ = try await fetchDetails(for: job)
         } catch {
@@ -190,6 +202,36 @@ final class AppModel: ObservableObject {
 
     func requestNotificationPermission() async {
         settings.notificationsEnabled = await NotificationManager.shared.requestAuthorization()
+    }
+
+    func clearNotificationJobToOpen() {
+        notificationJobToOpen = nil
+        NotificationManager.shared.clearPendingJobRoute()
+    }
+
+    func isExcludedByCountry(_ job: UpworkJob) -> Bool {
+        guard let location = job.client?.location else { return false }
+        let country = location.country?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let locationText = country.flatMap { $0.isEmpty ? nil : $0 } ?? location.displayName
+        let countryWords = Self.keywordWords(in: locationText)
+        guard !countryWords.isEmpty else { return false }
+
+        let keywordLines = settings.excludedCountryKeywords
+            .components(separatedBy: CharacterSet.newlines.union(CharacterSet(charactersIn: ",;")))
+        return keywordLines.contains { keyword in
+            let keywordWords = Self.keywordWords(in: keyword)
+            guard !keywordWords.isEmpty, keywordWords.count <= countryWords.count else { return false }
+            for start in 0...(countryWords.count - keywordWords.count) {
+                let countrySlice = countryWords[start..<(start + keywordWords.count)]
+                let matches = zip(keywordWords, countrySlice).enumerated().allSatisfy { index, pair in
+                    let (keywordWord, countryWord) = pair
+                    return countryWord == keywordWord
+                        || (keywordWord.count >= 2 && index == keywordWords.count - 1 && countryWord.hasPrefix(keywordWord))
+                }
+                if matches { return true }
+            }
+            return false
+        }
     }
 
     func copy(job: UpworkJob) {
@@ -350,14 +392,39 @@ final class AppModel: ObservableObject {
         UserDefaults.standard.set(true, forKey: primedKey)
 
         guard notify, isPrimed, settings.notificationsEnabled else { return }
-        let jobsToNotify = Array(newJobs.prefix(10))
+        let jobsToNotify = Array(newJobs.filter { !isExcludedByCountry($0) }.prefix(10))
         for job in jobsToNotify {
-            NotificationManager.shared.notify(job: job)
+            NotificationManager.shared.notify(job: job, feed: feed)
         }
         UserDefaults.standard.set(
             Array(notified.union(jobsToNotify.map(\.id))),
             forKey: notifiedKey
         )
+    }
+
+    private static func keywordWords(in value: String) -> [String] {
+        value
+            .folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current)
+            .split(whereSeparator: { !$0.isLetter && !$0.isNumber })
+            .map(String.init)
+    }
+
+    private func receiveNotificationRoute(_ route: JobNotificationRoute) {
+        deferredNotificationRoute = route
+        presentDeferredNotificationRouteIfReady()
+    }
+
+    private func presentDeferredNotificationRouteIfReady() {
+        guard !isRestoringConnection, let route = deferredNotificationRoute else { return }
+        deferredNotificationRoute = nil
+        selectedFeed = route.feed
+        notificationJobToOpen = jobsByFeed.values
+            .compactMap { $0.first(where: { $0.id == route.jobID }) }
+            .first ?? route.placeholderJob
+        NotificationManager.shared.clearPendingJobRoute()
+        #if os(macOS)
+        NSApp.activate(ignoringOtherApps: true)
+        #endif
     }
 }
 
